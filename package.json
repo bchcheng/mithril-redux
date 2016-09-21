@@ -1,6 +1,6 @@
 {
   "name": "mithril-redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bindings between Mithril and Redux",
   "main": "dist/index.js",
   "jsnext:main": "index.js",
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/colinbate/mithril-redux#readme",
   "peerDependencies": {
-    "mithril": "^0.2.0"
+    "mithril": "github:lhorie/mithril.js#rewrite"
   },
   "devDependencies": {
     "babel": "^6.3.26",
