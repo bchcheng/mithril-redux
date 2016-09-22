@@ -20,7 +20,7 @@ function wrapView (comp, actionMap) {
 
 const dispatchFactory = (creator, dispatch) => (...factoryArgs) => (...args) => dispatch(creator(...factoryArgs, ...args));
 
-export const connect = (selector, actions) => (Component) => ({
+export const connect = (selector, actions) => (Component) => (Provider.mithril({
   view (controller, props, children) {
     const {dispatch, getState} = Provider.store;
     let actionMap = {};
@@ -40,7 +40,7 @@ export const connect = (selector, actions) => (Component) => ({
     wrapView(comp, actionMap);
     return Provider.mithril(comp, {dispatch, ...state, ...actionMap, ...props}, children);
   }
-});
+}));
 
 export const redrawMiddleware = () => (next) => (action) => {
   next(action);
